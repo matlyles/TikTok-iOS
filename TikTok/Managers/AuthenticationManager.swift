@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import FirebaseAuth
+
+final class AuthenticationManager {
+    
+    public static let shared = AuthenticationManager()
+    private let auth = Auth.auth()
+    private init() {}
+
+    // Public Methods
+    public func getUserData(completion: (Result<[String], NSError>) -> Void) {
+        return completion(.success(["String"]))
+    }
+}
