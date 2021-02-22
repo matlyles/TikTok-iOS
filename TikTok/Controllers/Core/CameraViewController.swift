@@ -14,4 +14,12 @@ class CameraViewController: UIViewController {
         view.backgroundColor = .systemBackground
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.unselectedItemTintColor = .white
+        self.tabBarController?.tabBar.tintColor = .white
+        self.tabBarController?.tabBar.barTintColor = .black
+        self.tabBarController?.tabBar.isOpaque = false
+        self.tabBarController?.tabBar.isTranslucent = false
+    }
+    
 }

@@ -12,6 +12,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControllers()
+        
     }
     
     private func setupControllers() {
@@ -21,9 +22,12 @@ class TabBarViewController: UITabBarController {
         let notifications = createNavControllerTabBarItem(controller: NotificationsViewController(), title: "Notifications", image: "bell", selectedImage: "bell.fill", tag: 4)
         let profile = createNavControllerTabBarItem(controller: ProfileViewController(), title: "Profile", image: "person", selectedImage: "person.fill", tag: 5)
         
+        home.navigationBar.backgroundColor = .clear
+        home.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        home.navigationBar.shadowImage = UIImage()
+        
         setViewControllers([home, explore, camera, notifications, profile], animated: false)
-        self.tabBar.unselectedItemTintColor = .secondaryLabel
-        self.tabBar.tintColor = .label
+
     }
     
     func createNavControllerTabBarItem(controller: UIViewController,

@@ -24,6 +24,8 @@
 		0C6887C925D8883B00395B3C /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6887C825D8883B00395B3C /* AuthenticationManager.swift */; };
 		0C98DAE125E1DFEE00EE805F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C98DAE025E1DFEE00EE805F /* GoogleService-Info.plist */; };
 		0C98DAFB25E237F300EE805F /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98DAFA25E237F300EE805F /* HapticsManager.swift */; };
+		0C98DB0025E2DE5500EE805F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98DAFF25E2DE5500EE805F /* Extensions.swift */; };
+		0C98DB0325E2EA8500EE805F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98DB0225E2EA8500EE805F /* PostModel.swift */; };
 		0CB873BC25D8701E006E7D4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB873BB25D8701E006E7D4E /* AppDelegate.swift */; };
 		0CB873BE25D8701E006E7D4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB873BD25D8701E006E7D4E /* SceneDelegate.swift */; };
 		0CB873C025D8701E006E7D4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB873BF25D8701E006E7D4E /* HomeViewController.swift */; };
@@ -48,6 +50,8 @@
 		0C6887C825D8883B00395B3C /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		0C98DAE025E1DFEE00EE805F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C98DAFA25E237F300EE805F /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		0C98DAFF25E2DE5500EE805F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0C98DB0225E2EA8500EE805F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		0CB873B825D8701E006E7D4E /* TikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB873BB25D8701E006E7D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB873BD25D8701E006E7D4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				0CB873BB25D8701E006E7D4E /* AppDelegate.swift */,
 				0CB873BD25D8701E006E7D4E /* SceneDelegate.swift */,
 				0CB873C425D8701F006E7D4E /* Assets.xcassets */,
+				0C98DAFF25E2DE5500EE805F /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 		0CB873D725D883FD006E7D4E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0C98DB0225E2EA8500EE805F /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,12 +347,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C98DAFB25E237F300EE805F /* HapticsManager.swift in Sources */,
+				0C98DB0325E2EA8500EE805F /* PostModel.swift in Sources */,
 				0C6887C625D8882C00395B3C /* DatabaseManager.swift in Sources */,
 				0C68879F25D886D600395B3C /* ExploreViewController.swift in Sources */,
 				0C6887AC25D8872F00395B3C /* UserListViewController.swift in Sources */,
 				0C6887B525D8874D00395B3C /* SettingsViewController.swift in Sources */,
 				0C6887C025D8880B00395B3C /* APICaller.swift in Sources */,
 				0C6887BD25D887F300395B3C /* PostViewController.swift in Sources */,
+				0C98DB0025E2DE5500EE805F /* Extensions.swift in Sources */,
 				0C6887A325D886FD00395B3C /* CameraViewController.swift in Sources */,
 				0C6887B825D8876700395B3C /* TabBarViewController.swift in Sources */,
 				0CB873C025D8701E006E7D4E /* HomeViewController.swift in Sources */,
