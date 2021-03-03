@@ -120,7 +120,6 @@ class HomeViewController: UIViewController {
             completion: nil
         )
         forYouPageViewController.dataSource = self
-        
         horizontalScrollView.addSubview(forYouPageViewController.view)
         forYouPageViewController.view.frame = CGRect(x: view.width, y: 0, width: horizontalScrollView.width, height: horizontalScrollView.height)
         addChild(forYouPageViewController)

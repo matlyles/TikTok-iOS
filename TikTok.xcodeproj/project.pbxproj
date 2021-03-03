@@ -31,6 +31,7 @@
 		0CB873C025D8701E006E7D4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB873BF25D8701E006E7D4E /* HomeViewController.swift */; };
 		0CB873C525D8701F006E7D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB873C425D8701F006E7D4E /* Assets.xcassets */; };
 		0CB873C825D8701F006E7D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB873C625D8701F006E7D4E /* LaunchScreen.storyboard */; };
+		0CBA205F25EF2B6E00B7D301 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA205E25EF2B6E00B7D301 /* CommentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		0CB873C425D8701F006E7D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CB873C725D8701F006E7D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CB873C925D8701F006E7D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CBA205E25EF2B6E00B7D301 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		47A835F5BBA0D91E7927EF17 /* Pods-TikTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.debug.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.debug.xcconfig"; sourceTree = "<group>"; };
 		5859C2CD622FEC7BF7B3B34C /* Pods_TikTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C679D1F51F9B6A7525E0493D /* Pods-TikTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.release.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				0C6887B125D8874100395B3C /* SignUpViewController.swift */,
 				0C6887B425D8874D00395B3C /* SettingsViewController.swift */,
 				0C6887BC25D887F300395B3C /* PostViewController.swift */,
+				0CBA205E25EF2B6E00B7D301 /* CommentsViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			files = (
 				0C98DAFB25E237F300EE805F /* HapticsManager.swift in Sources */,
 				0C98DB0325E2EA8500EE805F /* PostModel.swift in Sources */,
+				0CBA205F25EF2B6E00B7D301 /* CommentsViewController.swift in Sources */,
 				0C6887C625D8882C00395B3C /* DatabaseManager.swift in Sources */,
 				0C68879F25D886D600395B3C /* ExploreViewController.swift in Sources */,
 				0C6887AC25D8872F00395B3C /* UserListViewController.swift in Sources */,
