@@ -20,7 +20,7 @@ class TabBarViewController: UITabBarController {
         let explore = createNavControllerTabBarItem(controller: ExploreViewController(), title: "Explore", image: "safari", selectedImage: "safari.fill", tag: 2)
         let camera = createNavControllerTabBarItem(controller: CameraViewController(), title: "Camera", image: "camera", selectedImage: "camera.fill", tag: 3)
         let notifications = createNavControllerTabBarItem(controller: NotificationsViewController(), title: "Notifications", image: "bell", selectedImage: "bell.fill", tag: 4)
-        let profile = createNavControllerTabBarItem(controller: ProfileViewController(), title: "Profile", image: "person", selectedImage: "person.fill", tag: 5)
+        let profile = createNavControllerTabBarItem(controller: ProfileViewController(user: User(username: "tes", profileImageUrl: nil, id: UUID().uuidString)), title: "Profile", image: "person", selectedImage: "person.fill", tag: 5)
         
         home.navigationBar.backgroundColor = .clear
         home.navigationBar.setBackgroundImage(UIImage(), for: .default)

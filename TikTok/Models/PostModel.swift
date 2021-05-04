@@ -9,6 +9,10 @@ import Foundation
 
 struct PostModel {
     let identifier: String
+    let user = User(username: "Frank Black",
+                    profileImageUrl: URL(string: "https://randomuser.me/api/portraits/men/58.jpg"),
+                    id: UUID().uuidString
+    )
     var isLikedByCurrentUser = false
     
     static func mockModels() -> [PostModel] {

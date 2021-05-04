@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0506A73E825F044CB2165CAF /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5859C2CD622FEC7BF7B3B34C /* Pods_TikTok.framework */; };
+		0C192584263F30E200ED1378 /* Layout+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C192583263F30E200ED1378 /* Layout+Ext.swift */; };
+		0C192588263F494400ED1378 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C192587263F494400ED1378 /* PostComment.swift */; };
+		0C19258B263F497C00ED1378 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C19258A263F497C00ED1378 /* User.swift */; };
+		0C19258F263F8E2500ED1378 /* CommentItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C19258E263F8E2500ED1378 /* CommentItemCell.swift */; };
+		0C192592263FA2E600ED1378 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C192591263FA2E600ED1378 /* Date+Ext.swift */; };
+		0C1925952640D9A300ED1378 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1925942640D9A300ED1378 /* UIImageView+Ext.swift */; };
+		0C1925982640DF6A00ED1378 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1925972640DF6A00ED1378 /* UIButton+Ext.swift */; };
 		0C68879F25D886D600395B3C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C68879E25D886D600395B3C /* ExploreViewController.swift */; };
 		0C6887A325D886FD00395B3C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6887A225D886FD00395B3C /* CameraViewController.swift */; };
 		0C6887A625D8870D00395B3C /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6887A525D8870D00395B3C /* NotificationsViewController.swift */; };
@@ -35,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C192583263F30E200ED1378 /* Layout+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layout+Ext.swift"; sourceTree = "<group>"; };
+		0C192587263F494400ED1378 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
+		0C19258A263F497C00ED1378 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0C19258E263F8E2500ED1378 /* CommentItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItemCell.swift; sourceTree = "<group>"; };
+		0C192591263FA2E600ED1378 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		0C1925942640D9A300ED1378 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		0C1925972640DF6A00ED1378 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		0C68879E25D886D600395B3C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		0C6887A225D886FD00395B3C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		0C6887A525D8870D00395B3C /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,7 @@
 		0C6887C225D8881700395B3C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		0C6887C525D8882C00395B3C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0C6887C825D8883B00395B3C /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		0C7D10692641DA540030FC37 /* video_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_01.mp4; sourceTree = "<group>"; };
 		0C98DAE025E1DFEE00EE805F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C98DAFA25E237F300EE805F /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		0C98DAFF25E2DE5500EE805F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -78,6 +93,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C192582263F30CC00ED1378 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0C192583263F30E200ED1378 /* Layout+Ext.swift */,
+				0C192591263FA2E600ED1378 /* Date+Ext.swift */,
+				0C1925942640D9A300ED1378 /* UIImageView+Ext.swift */,
+				0C1925972640DF6A00ED1378 /* UIButton+Ext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0C19258D263F8E0B00ED1378 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C19258E263F8E2500ED1378 /* CommentItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0C68879A25D8867500395B3C /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +182,7 @@
 		0CB873D425D883D7006E7D4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C19258D263F8E0B00ED1378 /* Cells */,
 				0C6887BA25D8878300395B3C /* Storyboards */,
 			);
 			path = Views;
@@ -165,6 +200,8 @@
 		0CB873D625D883E0006E7D4E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0C7D10692641DA540030FC37 /* video_01.mp4 */,
+				0C192582263F30CC00ED1378 /* Helpers */,
 				0CB873BB25D8701E006E7D4E /* AppDelegate.swift */,
 				0CB873BD25D8701E006E7D4E /* SceneDelegate.swift */,
 				0CB873C425D8701F006E7D4E /* Assets.xcassets */,
@@ -177,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				0C98DB0225E2EA8500EE805F /* PostModel.swift */,
+				0C192587263F494400ED1378 /* PostComment.swift */,
+				0C19258A263F497C00ED1378 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,6 +393,8 @@
 				0CBA205F25EF2B6E00B7D301 /* CommentsViewController.swift in Sources */,
 				0C6887C625D8882C00395B3C /* DatabaseManager.swift in Sources */,
 				0C68879F25D886D600395B3C /* ExploreViewController.swift in Sources */,
+				0C192588263F494400ED1378 /* PostComment.swift in Sources */,
+				0C192584263F30E200ED1378 /* Layout+Ext.swift in Sources */,
 				0C6887AC25D8872F00395B3C /* UserListViewController.swift in Sources */,
 				0C6887B525D8874D00395B3C /* SettingsViewController.swift in Sources */,
 				0C6887C025D8880B00395B3C /* APICaller.swift in Sources */,
@@ -362,13 +403,18 @@
 				0C6887A325D886FD00395B3C /* CameraViewController.swift in Sources */,
 				0C6887B825D8876700395B3C /* TabBarViewController.swift in Sources */,
 				0CB873C025D8701E006E7D4E /* HomeViewController.swift in Sources */,
+				0C192592263FA2E600ED1378 /* Date+Ext.swift in Sources */,
 				0C6887B225D8874100395B3C /* SignUpViewController.swift in Sources */,
 				0C6887C925D8883B00395B3C /* AuthenticationManager.swift in Sources */,
 				0C6887A625D8870D00395B3C /* NotificationsViewController.swift in Sources */,
 				0C6887AF25D8873A00395B3C /* SignInViewController.swift in Sources */,
 				0C6887A925D8871800395B3C /* ProfileViewController.swift in Sources */,
+				0C1925952640D9A300ED1378 /* UIImageView+Ext.swift in Sources */,
+				0C19258B263F497C00ED1378 /* User.swift in Sources */,
+				0C1925982640DF6A00ED1378 /* UIButton+Ext.swift in Sources */,
 				0C6887C325D8881700395B3C /* StorageManager.swift in Sources */,
 				0CB873BC25D8701E006E7D4E /* AppDelegate.swift in Sources */,
+				0C19258F263F8E2500ED1378 /* CommentItemCell.swift in Sources */,
 				0CB873BE25D8701E006E7D4E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

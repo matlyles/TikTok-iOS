@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol PostControllerDelegate: AnyObject {
+    func loadCommentsViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel)
+    func loadProfileViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel)
+}
+
 class PostViewController: UIViewController {
+    
+    var delegate: PostControllerDelegate?
     
     var model: PostModel
     
@@ -47,12 +54,14 @@ class PostViewController: UIViewController {
         return btn
     }()
     
-    private let userAvatar: UIImageView = {
-       let img = UIImageView()
-        img.contentMode = .scaleAspectFit
+    private let userAvatar: UIButton = {
+        let img = UIButton(type: .custom)
+        img.setImage(#imageLiteral(resourceName: "77"), for: .normal)
+        img.contentMode = .scaleAspectFill
         img.layer.masksToBounds = true
         img.clipsToBounds = true
-        img.layer.cornerRadius = 20
+        img.addBorder(stroke: 1.5, color: UIColor.white.cgColor)
+        img.addTarget(self, action: #selector(handleGoToProfile), for: .touchUpInside)
         return img
     }()
     
@@ -100,25 +109,23 @@ class PostViewController: UIViewController {
     }
     
     func setupButtons() {
+        
         actionStackView.addArrangedSubview(likeButton)
         actionStackView.addArrangedSubview(commentButton)
         actionStackView.addArrangedSubview(shareButton)
         view.addSubview(actionStackView)
         
-        userAvatar.image = #imageLiteral(resourceName: "77")
         usernameLabel.text = "Straight Savage"
         captionLabel.text = "this is some text and i do what i want , yea i do what i want now, so F you!"
-        let userStack = UIStackView(arrangedSubviews: [
-            userAvatar, usernameLabel
-        ])
-        //userStack.distribution = .fill
-        userStack.axis = .horizontal
-        userStack.spacing = 15
-        userStack.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        commentsStackView.addArrangedSubview(userStack)
+    
+        commentsStackView.addArrangedSubview(usernameLabel)
         commentsStackView.addArrangedSubview(captionLabel)
         view.addSubview(commentsStackView)
+        
+        
+        userAvatar.layer.cornerRadius = 22
+        view.addSubview(userAvatar)
+        
         
         likeButton.addTarget(self, action: #selector(handleDidTapLike), for: .touchUpInside)
         commentButton.addTarget(self, action: #selector(handleDidTapComment), for: .touchUpInside)
@@ -131,6 +138,10 @@ class PostViewController: UIViewController {
         tap.numberOfTapsRequired = 2
         view.addGestureRecognizer(tap)
         print("yo")
+    }
+    
+    @objc func handleGoToProfile() {
+        delegate?.loadProfileViewController(self, didTapProfileButtonFor: model)
     }
     
     @objc func handleDoubleTap(_ gesture: UITapGestureRecognizer) {
@@ -171,7 +182,7 @@ class PostViewController: UIViewController {
     }
     
     @objc func handleDidTapComment() {
-        print("did tap comment")
+        delegate?.loadCommentsViewController(self, didTapCommentButtonFor: model)
     }
     
     @objc func handleDidTapShare() {
@@ -186,14 +197,16 @@ class PostViewController: UIViewController {
         NSLayoutConstraint.activate([
             actionStackView.widthAnchor.constraint(equalToConstant: 55),
             actionStackView.heightAnchor.constraint(equalToConstant: 52*3),
-            actionStackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8),
+            actionStackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -9),
             actionStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
-            userAvatar.widthAnchor.constraint(equalToConstant: 40),
             commentsStackView.widthAnchor.constraint(equalToConstant: view.frame.width-100),
             commentsStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
             commentsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
-            
         ])
+        
+        userAvatar.setDimensions(width: 44, height: 44)
+        userAvatar.bottomAnchor.constraint(equalTo: actionStackView.topAnchor, constant: -14).isActive = true
+        userAvatar.centerXAnchor.constraint(equalTo: actionStackView.centerXAnchor).isActive = true
     }
     
 }
