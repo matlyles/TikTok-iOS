@@ -200,14 +200,14 @@ extension HomeViewController: UIScrollViewDelegate {
 
 extension HomeViewController: PostControllerDelegate {
     
-    func loadProfileViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel) {
+    func postViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel) {
         print("did Tap got to profile")
         let user = post.user
         let vc = ProfileViewController(user: user)
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    func loadCommentsViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel) {
+    func postViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel) {
         horizontalScrollView.isScrollEnabled = false
         if horizontalScrollView.contentOffset.x == 0 {
             // is following

@@ -5,17 +5,18 @@
 //  Created by Matthew Lyles on 2/13/21.
 //
 
+import AVFoundation
 import UIKit
 
+
 protocol PostControllerDelegate: AnyObject {
-    func loadCommentsViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel)
-    func loadProfileViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel)
+    func postViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel)
+    func postViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel)
 }
 
 class PostViewController: UIViewController {
     
     var delegate: PostControllerDelegate?
-    
     var model: PostModel
     
     let actionStackView: UIStackView = {
@@ -91,6 +92,9 @@ class PostViewController: UIViewController {
         return sv
     }()
     
+    var player: AVPlayer?
+    private var playerDidFinishObserver: NSObjectProtocol?
+    
     init(model: PostModel) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
@@ -103,9 +107,42 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = [.red, .gray, .green, .blue, .purple, .brown, .cyan, .orange, .systemPink].randomElement()
+        //view.backgroundColor = [.red, .gray, .green, .blue, .purple, .brown, .cyan, .orange, .systemPink].randomElement()
+        configureVideo()
         setupButtons()
         setupDoubleTapLike()
+    }
+    
+    private func configureVideo() {
+        print("do something")
+        guard let path = Bundle.main.path(forResource: "video", ofType: "mp4") else {
+            print("couldn't find video")
+            return
+        }
+        print(path)
+        let url = URL(fileURLWithPath: path)
+        player = AVPlayer(url: url)
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = view.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        playerLayer.repeatCount = 10
+        view.layer.addSublayer(playerLayer)
+        player?.volume = 0
+        player?.play()
+        
+        guard let player = player else { return }
+        
+        playerDidFinishObserver = NotificationCenter.default.addObserver(
+            forName: .AVPlayerItemDidPlayToEndTime,
+            object: player.currentItem,
+            queue: .main) { _ in
+            
+            player.seek(to: .zero)
+            player.play()
+        }
+            
+        
     }
     
     func setupButtons() {
@@ -141,7 +178,7 @@ class PostViewController: UIViewController {
     }
     
     @objc func handleGoToProfile() {
-        delegate?.loadProfileViewController(self, didTapProfileButtonFor: model)
+        delegate?.postViewController(self, didTapProfileButtonFor: model)
     }
     
     @objc func handleDoubleTap(_ gesture: UITapGestureRecognizer) {
@@ -182,7 +219,7 @@ class PostViewController: UIViewController {
     }
     
     @objc func handleDidTapComment() {
-        delegate?.loadCommentsViewController(self, didTapCommentButtonFor: model)
+        delegate?.postViewController(self, didTapCommentButtonFor: model)
     }
     
     @objc func handleDidTapShare() {
